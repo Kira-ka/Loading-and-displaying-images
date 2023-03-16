@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".activity.PhotoFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:background="@color/colorPrimaryDark"
+            app:titleTextColor="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/options_post"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            app:title="1of1"
+            app:navigationIconTint="@color/gray"
+            app:srcCompat="@drawable/ic_add_24dp"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/plug2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:adjustViewBounds="true"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/like2"
+        style="@style/Widget.AppTheme.IconButtonPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/common_spacing"
+        app:icon="@drawable/ic_like_24dp"
+        app:iconGravity="textStart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/comments"
+        style="@style/Widget.AppTheme.IconButtonPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        app:icon="@drawable/ic_baseline_mode_comment_24" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/share2"
+        style="@style/Widget.AppTheme.IconButtonPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/common_spacing"
+        app:icon="@drawable/ic_share_24" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
