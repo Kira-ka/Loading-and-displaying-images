@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toFile
 import androidx.core.net.toUri
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -57,8 +58,7 @@ class FeedFragment : Fragment() {
             }
 
             override fun onSpecificPostPicture(post: Post) {
-                viewModel.edit(post)
-                findNavController().navigate(R.id.action_feedFragment_to_photoFragment)
+                findNavController().navigate(R.id.action_feedFragment_to_photoFragment, bundleOf("POST_URL" to post.attachment!!.url))
             }
         })
         binding.list.adapter = adapter
